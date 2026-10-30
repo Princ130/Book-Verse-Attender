@@ -11,7 +11,9 @@
     --muted: #7c7b77;
     --line: #e8e0d3;
 }
-
+a.submit-button {
+    text-decoration: none;
+}
 html {
     scroll-behavior: smooth;
 }
