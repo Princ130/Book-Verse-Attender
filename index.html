@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6f1e8">
+    <meta name="description" content="BookVerse@LPU event attendance and feedback form.">
+
+    <title>Event Check-in | BookVerse@LPU</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="page-shell">
+
+    <header class="topbar">
+
+        <a class="brand" href="#" aria-label="BookVerse home">
+
+            <span class="brand-mark">
+                <svg viewBox="0 0 52 42">
+                    <path d="M4 7c9-3 16-1 22 5v25C19 31 12 30 4 33V7Z"/>
+                    <path d="M48 7c-9-3-16-1-22 5v25c7-6 14-7 22-4V7Z"/>
+                    <path class="page-line" d="M10 13c5-1 9 0 13 3M10 19c5-1 9 0 13 3M42 13c-5-1-9 0-13 3M42 19c-5-1-9 0-13 3"/>
+                </svg>
+            </span>
+
+            <span class="brand-name">
+                BookVerse<span>@LPU</span>
+                <small>THE BOOK READING UNIVERSE</small>
+            </span>
+
+        </a>
+
+        <span class="topbar-note">
+            <i></i> EVENT CHECK-IN
+        </span>
+
+    </header>
+
+
+    <main class="layout">
+
+        <section class="intro">
+
+            <p class="eyebrow">
+                <span></span> YOU'RE PART OF THE STORY
+            </p>
+
+            <h1>
+                Every reader<br>
+                has a <em>place here.</em>
+            </h1>
+
+            <p class="intro-copy">
+                Take a moment to check in. Your presence makes this
+                gathering a little more meaningful, and your thoughts
+                help us make the next one even better.
+            </p>
+
+            <div class="quote-card">
+
+                <span class="quote-mark">“</span>
+
+                <p>
+                    A room full of readers is a room full of worlds.
+                </p>
+
+                <span class="quote-by">
+                    — BOOKVERSE@LPU
+                </span>
+
+            </div>
+
+            <div class="side-decoration">
+                <span class="star star-one">✳</span>
+                <span class="star star-two">✦</span>
+                <span class="orbit"></span>
+            </div>
+
+        </section>
+
+
+        <section class="form-panel">
+
+            <div class="form-heading">
+
+                <div>
+                    <p class="section-kicker">A QUICK HELLO</p>
+
+                    <h2>Event attendance</h2>
+
+                    <p class="form-subtitle">
+                        A few details before you dive back in.
+                    </p>
+                </div>
+
+                <span class="page-number">
+                    01 <b>/</b> 01
+                </span>
+
+            </div>
+
+
+            <form id="attendanceForm" novalidate>
+
+                <div class="field-grid">
+
+                    <div class="field full">
+
+                        <label for="fullName">
+                            Full name <span>*</span>
+                        </label>
+
+                        <input
+                            id="fullName"
+                            name="name"
+                            type="text"
+                            placeholder="Your name as you'd like it recorded"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <small class="field-error" id="nameError"></small>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label for="regNo">
+                            Registration number <span>*</span>
+                        </label>
+
+                        <input
+                            id="regNo"
+                            name="registrationNumber"
+                            type="text"
+                            placeholder="Enter your registration number"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <small class="field-error" id="regError"></small>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="department">
+                            Department <span>*</span>
+                        </label>
+
+                        <input
+                            id="department"
+                            name="department"
+                            type="text"
+                            placeholder="e.g. CSE"
+                            required
+                        >
+
+                        <small class="field-error" id="departmentError"></small>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="section">
+                            Section <span>*</span>
+                        </label>
+
+                        <input
+                            id="section"
+                            name="section"
+                            type="text"
+                            placeholder="e.g. KOC..."
+                            required
+                        >
+
+                        <small class="field-error" id="sectionError"></small>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label for="email">
+                            Email address
+                            <span class="optional">MANDATORY</span>
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <small class="field-hint">
+                            Your email isn't collected automatically by the
+                            browser, so you can enter it here if you'd like
+                            a record of your attendance.
+                        </small>
+
+                        <small class="field-error" id="emailError"></small>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label for="feedback">
+                            A thought to share
+                            <span class="optional">OPTIONAL</span>
+                        </label>
+
+                        <textarea
+                            id="feedback"
+                            name="feedback"
+                            rows="4"
+                            maxlength="600"
+                            placeholder="How was the event? A favourite moment, a suggestion, or just a few words..."
+                        ></textarea>
+
+                        <div class="textarea-meta">
+                            <span>Your feedback helps our next chapter.</span>
+                            <span id="charCount">0 / 600</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="privacy-note">
+
+                    <span class="lock-icon">✳</span>
+
+                    <p>
+                        Your attendance timestamp will be recorded
+                        automatically when you submit this form,
+                        using your device's local time.
+                    </p>
+
+                </div>
+
+
+                <button class="submit-button" type="submit">
+
+                    <span>Confirm my attendance</span>
+
+                    <span class="button-arrow">↗</span>
+
+                </button>
+
+                <p class="form-footnote">
+                    By submitting, you confirm that the details above
+                    are accurate.
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <span>BOOKVERSE@LPU</span>
+
+        <span>
+            READ <b>·</b> CREATE <b>·</b> BELONG
+        </span>
+
+        <span>
+            WHERE EVERY READER HAS A STORY TO TELL.
+        </span>
+
+    </footer>
+
+</div>
+
+
+<!-- SUCCESS POPUP -->
+
+<div class="success-overlay" id="successOverlay" aria-hidden="true">
+
+    <div class="success-card"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="successTitle">
+
+        <div class="success-icon">✓</div>
+
+        <p class="section-kicker">YOU'RE ON THE LIST</p>
+
+        <h2 id="successTitle">
+            Thanks for<br><em>showing up.</em>
+        </h2>
+
+        <p>
+            Your attendance details have been prepared successfully.
+        </p>
+
+        <p class="success-time" id="successTime"></p>
+
+        <button type="button" id="closeSuccess" class="submit-button">
+
+            <span>Back to BookVerse</span>
+
+            <span class="button-arrow">↗</span>
+
+        </button>
+
+        <small class="demo-warning">
+            This is a front-end confirmation. Connect a backend or
+            spreadsheet to save submissions permanently.
+        </small>
+
+    </div>
+
+</div>
+
+</body>
+</html>
